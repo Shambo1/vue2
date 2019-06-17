@@ -18,9 +18,9 @@ module.exports = {
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
+    disableHostCheck: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
     /**
      * Source Maps
      */
@@ -35,6 +35,14 @@ module.exports = {
 
     cssSourceMap: true
   },
+  
+  devServer: {
+        contentBase: './dist',
+        compress: true,
+        disableHostCheck: true,
+        overlay: true,
+        hot: true
+    },
 
   build: {
     // Template for index.html
